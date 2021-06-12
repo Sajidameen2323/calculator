@@ -114,6 +114,7 @@ class App extends React.Component {
 		var str = this.state.formula;
 		str = str.replaceAll('x','*');
 		var final = window.eval(str);
+		final = Math.fround(final);
 		final = Math.floor(final*100000)/100000;
 		console.log(final);
 		var forDiv = str.toString().match(regDiv);
