@@ -107,7 +107,7 @@ class App extends React.Component {
 		var str = this.state.formula;
 		var final = window.eval(str);
 		final = Math.floor(final*100000)/100000;
-		
+		console.log(final);
 		var forDiv = str.toString().match(regDiv);
 		if(forDiv){
 			let divi = forDiv.map((el)=>el.split('/')).map((el)=>el.reduce((a,b)=>a/b)).filter((el)=>el!=='').map((el)=>parseFloat(el));
