@@ -36,6 +36,7 @@ code {
 #display{
 	text-align: center;
 	width: 350px;
+	min-height: 50px;
 	border-style: inset;
 	border-radius: 5px;
 	font-family: monospace;

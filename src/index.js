@@ -9,16 +9,23 @@ class App extends React.Component {
 		super(props);
 		this.state = {
 			preVal : 0,
-			crrVal : 0,
+			crrVal : null,
 			dotPressed : false,
 			negative : false,
-			formula : '0'
+			formula : ''
 		}
 	}
 
 
 	addDecimal(e){
-		if(!this.state.dotPressed){
+		let lastDigit;
+		if(this.state.formula && this.state.formula[this.state.formula.length-1].toString() !== '0'){
+		 lastDigit = this.state.formula[this.state.formula.length-1].toString();
+		} else if(this.state.formula[this.state.formula.length-1].toString() == '0'){
+			lastDigit='1'
+		}
+		
+		if(!this.state.dotPressed && parseFloat(lastDigit)){
 			this.setState({
 				formula: this.state.formula + e.target.value,
 				crrVal : this.state.formula + e.target.value,
@@ -30,8 +37,8 @@ class App extends React.Component {
 	addNumber(e){
 		let str = this.state.crrVal;
 		let eValue = e.target.value;
-		if (str == '00' && eValue == '0'){
-			
+		if (str == '0' && eValue == '0'){
+
 		}else{
 			this.setState({
 			formula : this.state.formula + e.target.value,
@@ -67,9 +74,9 @@ class App extends React.Component {
 	}
 	clearValues(){
 		this.setState({
-			crrVal: 0,
+			crrVal: null,
 			preVal: 0,
-			formula: '0',
+			formula: '',
 			dotPressed:false,
 			negative:false
 		})
@@ -105,6 +112,7 @@ class App extends React.Component {
 		var regDiv = /(([-]*\d*[.])*[-]*\d+[/]([-]*\d*[.])*[-]*\d+([/]+[-]*\d+)*)/g;
 
 		var str = this.state.formula;
+		str = str.replaceAll('x','*');
 		var final = window.eval(str);
 		final = Math.floor(final*100000)/100000;
 		console.log(final);
@@ -137,14 +145,16 @@ class App extends React.Component {
 		//var final = adding - subtract;
 
 		let dotChk = final.toString().includes('.');
-
-		this.setState({
+		if(final || final==0){
+					this.setState({
 			crrVal : final,
-			formula : final,
+			formula : final.toString(),
 			preVal : final,
 			dotPressed : dotChk,
 			negative : false
 		})
+		}
+
 	}
 
 	dltItem(){
@@ -153,7 +163,7 @@ class App extends React.Component {
 		if(str.length > 1){
 			str = str.slice(0,str.length-1);
 		} else if (str !== '0'){
-			str = '0';
+			str = '';
 		}
 		
 		this.setState({
@@ -164,7 +174,7 @@ class App extends React.Component {
 
 
 	render() {
-		return (<div class="container container-fluid justify-content-center clearfix main">
+		return (<div className="container container-fluid justify-content-center clearfix main">
 			<h1 id='heading'>Calculator </h1>
 			<div id="display" className="container container-fluid bg-light flex-end ">
 			<h1 className="field">{this.state.crrVal}</h1>
