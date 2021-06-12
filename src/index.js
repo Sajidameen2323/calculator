@@ -37,9 +37,13 @@ class App extends React.Component {
 	addNumber(e){
 		let str = this.state.crrVal;
 		let eValue = e.target.value;
+		let chk;
+		if(str){
+			chk = str.startsWith('0') && str.length === 1
+		}
 		if (str == '0' && eValue == '0'){
 
-		}else{
+		}else if(!chk){
 			this.setState({
 			formula : this.state.formula + e.target.value,
 			crrVal : this.state.formula + e.target.value,
@@ -112,6 +116,7 @@ class App extends React.Component {
 		var regDiv = /(([-]*\d*[.])*[-]*\d+[/]([-]*\d*[.])*[-]*\d+([/]+[-]*\d+)*)/g;
 
 		var str = this.state.formula;
+
 		str = str.replaceAll('x','*');
 		var final = window.eval(str);
 		final = Math.fround(final);
