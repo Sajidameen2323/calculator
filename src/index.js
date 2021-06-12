@@ -106,7 +106,7 @@ class App extends React.Component {
 
 		var str = this.state.formula;
 		var final = window.eval(str);
-		Math.floor(final*100000)/100000;
+		final = Math.floor(final*100000)/100000;
 		
 		var forDiv = str.toString().match(regDiv);
 		if(forDiv){
