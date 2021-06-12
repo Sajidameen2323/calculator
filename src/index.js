@@ -106,6 +106,7 @@ class App extends React.Component {
 
 		var str = this.state.formula;
 		var final = window.eval(str);
+		Math.floor(final*100000)/100000;
 		
 		var forDiv = str.toString().match(regDiv);
 		if(forDiv){
@@ -134,7 +135,7 @@ class App extends React.Component {
 		
 		var adding = str.toString().match(regAdd).map((el)=>el.split('+')).flat().filter((el)=>el!=='').map((el)=>parseFloat(el)).reduce((a,b)=>a+b,0);
 		//var final = adding - subtract;
-		
+
 		let dotChk = final.toString().includes('.');
 
 		this.setState({
