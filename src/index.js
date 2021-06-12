@@ -105,7 +105,7 @@ class App extends React.Component {
 		var regDiv = /(([-]*\d*[.])*[-]*\d+[/]([-]*\d*[.])*[-]*\d+([/]+[-]*\d+)*)/g;
 
 		var str = this.state.formula;
-
+		var final = window.eval(str);
 		
 		var forDiv = str.toString().match(regDiv);
 		if(forDiv){
@@ -133,7 +133,8 @@ class App extends React.Component {
 		
 		
 		var adding = str.toString().match(regAdd).map((el)=>el.split('+')).flat().filter((el)=>el!=='').map((el)=>parseFloat(el)).reduce((a,b)=>a+b,0);
-		var final = adding - subtract;
+		//var final = adding - subtract;
+		
 		let dotChk = final.toString().includes('.');
 
 		this.setState({
