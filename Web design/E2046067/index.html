@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>Medi-World</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+</head>
+
+
+<body>
+  <nav id="navbar" class="nav">
+    <ul>
+
+      <li class="nav-list"><a href="about.html">About</a></li>
+      <li class="nav-list"><a href="services.html">Services</a></li>
+      <li class="nav-list"><a href="doctors.html">Doctors</a></li>
+      <li class="nav-list"><a href="contact.html">Contact</a></li>
+      <li class="nav-list active"><a href="index.html">Home</a></li>
+      <li style="float:left"><a class="nav-brand " href="#about">
+          <div class="brand-logo">
+            <img src="icons/heart-beat.png" >
+            <div> | Medi-World</div>
+          </div>
+        </a></li>
+    </ul>
+  </nav>
+  <div class="container clearfix">
+    <table class="slider">
+      <tr>
+        <td><img src="images/doc5.jpg" alt="" /></td>
+        <td><img src="images/doc4.jpg" alt=""/></td>
+        <td><img src="images/doc2.jpg" alt=""/></td>
+        <td><img src="images/elder.png" alt=""/></td>
+      </tr>
+    </table>
+
+    <table>
+      <thead>
+        <tr>
+          <td rowspan="2" colspan="2">
+            <h3 class="topic">Importance of good health</h3>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="2">
+            <p style="word-wrap: break-word;">A person who has good physical health is likely to have bodily functions
+              and processes working at their peak.
+
+              This is not only due not only to an absence of disease. Regular exercise, balanced nutrition, and adequate
+              rest all contribute to good health. People receive medical treatment to maintain the balance, when
+              necessary.
+
+              Physical well-being involves pursuing a healthful lifestyle to decrease the risk of disease. Maintaining
+              physical fitness, for example, can protect and develop the endurance of a person’s breathing and heart
+              function, muscular strength, flexibility, and body composition.</p>
+
+
+          </td>
+
+
+        </tr>
+        <tr>
+          <td colspan="2">
+            <p>A person who has good physical health is likely to have bodily functions and processes working at their
+              peak.
+
+              This is not only due not only to an absence of disease. Regular exercise, balanced nutrition, and adequate
+              rest all contribute to good health. People receive medical treatment to maintain the balance, when
+              necessary.
+
+              Physical well-being involves pursuing a healthful lifestyle to decrease the risk of disease. Maintaining
+              physical fitness, for example, can protect and develop the endurance of a person’s breathing and heart
+              function, muscular strength, flexibility, and body composition.</p>
+
+
+          </td>
+
+
+        </tr>
+        <tr>
+          <td colspan="2">
+            <p>According to the U.S. Department of Health & Human Services, mental health refers to a person’s
+              emotional, social, and psychological well-being. Mental health is as important as physical health as part
+              of a full, active lifestyle.
+
+              It is harder to define mental health than physical health because many psychological diagnoses depend on
+              an individual’s perception of their experience.
+
+              With improvements in testing, however, doctors are now able to identify some physical signs of some types
+              of mental illness in CT scans and genetic tests.
+
+              Good mental health is not only categorized by the absence of depression, anxiety, or another disorder. It
+              also depends on a person’s ability to:</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2">
+            <h3 class="topic">Make an appointment</h3>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+
+    <div class="form" id="contact">
+      <form action="/action_page.php" method="POST">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your first name" required>
+
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name " required>
+
+        <label for="phone">Enter your phone number:</label>
+        <input type="tel" id="phone" name="phone" pattern="^([+]94)(\d){9,9}$" required placeholder="+94#########">
+
+        <label for="address">Enter your address</label>
+        <textarea id="address" name="address" rows="2"
+          required>###/#, Example Street , Example city, Example Country</textarea>
+
+        <label for="gender">Select Gender</label>
+        <div id="gender">
+          <label class="radio-container">Male
+            <input type="radio" checked="checked" name="gender">
+          </label>
+          <label class="radio-container">Female
+            <input type="radio" name="gender">
+          </label>
+        </div>
+
+        <label for="date">Appointment Date</label>
+
+        <input type="date" id="date" name="appointmentDate" value="2021-08-17" min="2021-08-17" max="2022-12-31"
+          required>
+
+
+        <label for="doctor">Doctor</label>
+        <select id="doctor" name="doctor" required>
+          <option value="ananda">Ananda Illangakoon</option>
+          <option value="akila">Akila Viraj</option>
+          <option value="Anil Jasinghe">Anil Jasinghe</option>
+          <option value="bandara">Bandara Hetiarachi</option>
+          <option value="Rachel Christoffelsz">Rachel Christoffelsz</option>
+          <option value="Edward Frederick Kelaart">Edward Frederick Kelaart</option>
+          <option value="Varatharajah Thurairajah">Varatharajah Thurairajah</option>
+        </select>
+
+        <input type="submit" class="btn-submit" value="Submit">
+        <input type="reset" name="reset" value="Reset">
+      </form>
+    </div>
+    <div><a href="#"><button class="btn">Back to top</button></a></div>
+  </div>
+  <hr>
+  <!--  footer and social details-->
+  <footer class="footer clearfix" id="footer">
+    <br>
+    <table width="100%">
+      <tr>
+        <td align="center" width="40%">Author - Sajid Ameen</td>
+        <td width="20%"></td>
+        <td width="100%" alignHospital="left">Social</td>
+      </tr>
+      <tr>
+        <td rowspan="2" align="center" width="50%"><a href="https://www.linkedin.com/in/sajid-ameen-12b0b9216"
+            target="_blank">
+            <i><img class="social-icon" src="icons/linkedin.png" /></i>
+            LinkedIn</a></td>
+        <td></td>
+        <td align="left" width="50%"><a href="https://www.linkedin.com/in/sajid-ameen-12b0b9216" target="_blank">
+            <i><img class="social-icon" src="icons/facebook.png" /></i>
+            Facebook</a></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td align="left" width="50%"><a href="https://www.linkedin.com/in/sajid-ameen-12b0b9216" target="_blank">
+            <i><img class="social-icon" src="icons/twitter.png" /></i>
+            Twitter</a></td>
+      </tr>
+      <tr>
+        <td align="center" width="50%"><a href="https://www.linkedin.com/in/sajid-ameen-12b0b9216" target="_blank">
+            <i><img class="social-icon" src="icons/github.png" /></i>
+            Github</a></td>
+        <td></td>
+        <td align="left" width="50%"><a href="https://www.linkedin.com/in/sajid-ameen-12b0b9216" target="_blank">
+            <i><img class="social-icon" src="icons/instagram.png" /></i>
+            Instagram</a> </td>
+      </tr>
+      <tr align="center" width="50%">
+        <td colspan="3">
+          <p class="copyright">Best Hospital © 2021</p>
+          <div>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel
+              perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+        </td>
+      </tr>
+    </table>
+  </footer>
+
+</body>
+
+</html>

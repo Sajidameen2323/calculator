@@ -1,0 +1,162 @@
+<html>
+<head>
+<title>Examples</title>
+</head>
+<body>
+<h1>Heading</h1>
+<h2>Heading</h2>
+<h3>Heading</h3>
+<h4>Heading</h4>
+<h5>Heading</h5>
+<h6>Heading</h6>
+<br><br>
+<p>This a paragraph</p>
+<p>This another paragraph</p>
+
+<!-- This is a comment -->
+
+<a href="http://faraday.ee.emu.edu.tr/eee111" target="_blank"> Visit EEE 111</a>
+<br>
+<br>
+<table style="width: 50%" class="auto-style1">
+	<tr>
+		<td style="height: 26px"><label for="fn">Enter First Name</label></td>
+		<td style="height: 26px">
+		<input id="fn" name="fname" type="text" style="width: 262px"
+		 required autofocus pattern="[a-zA-Z]+" length="12" maxlength="15"/></td>
+	</tr>
+	<tr>
+		<td style="height: 26px"><label for="ln">Enter Last Name</label></td>
+		<td style="height: 26px">
+		<input id="ln" name="lname" type="text" style="width: 262px" required pattern="[a-zA-Z]+"
+		maxlength="15"/></td>
+	</tr>
+	<tr>
+		<td style="height: 26px"><label for="pws">Enter Password</label></td>
+		<td style="height: 26px">
+		<input id="ln" name="pws" type="password" style="width: 262px" required pattern="(\w){6,15}"
+		maxlength="15"/></td>
+	</tr>
+	<tr>
+		<td><label for="address">Enter Address</label></td>
+		<td><textarea id="address" name="address" cols="35" rows="2"
+		>16/1,Elemaldheniya,Muruthagahamula</textarea></td>
+	</tr>
+		<tr>
+		<td><label for="country">Select Country</label></td>
+		<td><select name="country">
+				<option value="US">America</option>
+				<option value="BR">Brazil</option>
+				<option value="CN">Canada</option>
+				<option value="ET">Ethiopia</option>
+				<option value="FN">Finland</option>
+				<option value="GN">Germany</option>
+				<option value="HK">Hongkong</option>
+				<option value="ID">Indonasia</option>
+				<option value="IN">India</option>
+				<option value="JM">Jamaica</option>
+				<option value="KZ">kazakasthan</option>
+				<option value="LB">Lebanes</option>
+				<option value="MN">Mongolia</option>
+				<option value="Ng">Nigeria</option>
+				<option value="PR">Paraguay</option>
+				<option value="RS">Russia</option>
+				<option value="LK">Srilanka</option>
+			</select></td>
+	</tr>
+	<tr>
+		<td><label for="gender">Select Gender</label></td>
+		<td><input name="gender" type="radio" value="male" checked/>Male
+		<input name="gender" type="radio" value="female"/>Female
+		<input name="gender" type="radio" value="gay"/>Other
+		</td>
+	</tr>
+	<tr>
+		<td><label for="gender">Select Hobies</label></td>
+		<td>
+		<input name="hobbies" type="checkbox" value="tv"/>Television	<br>
+		<input name="hobbies" type="checkbox" value="play"/>Playing	<br>
+		<input name="hobbies" type="checkbox" value="garden"/>Gardening	<br>
+	
+		<input name="hobbies" type="checkbox" checked  value="music"/>Music	<br>
+		<input name="hobbies" type="checkbox" value="code"/>Coding
+		</td>
+	</tr>
+<tr>
+<td><label for="avatar">Profile Picture</label></td>
+<td><input type="file"
+       id="avatar" name="avatar"
+       accept="image/png, image/jpeg"/></td>
+</tr>
+	<tr>
+		<td><input name="register" type="submit" value="Submit" />
+		<input name="Reset1" type="reset" value="reset" />
+		</td>
+		
+	</tr>
+
+
+</table><br>
+<ul>
+<li>Coffee</li>
+<li>Milk</li>
+</ul>
+<ol>
+<li>Coffee</li>
+<li>Milk</li>
+</ol>
+<dl>
+<dt>Coffee</dt>
+<dd>Black hot drink</dd>
+<dt>Milk</dt>
+<dd>White cold drink</dd>
+</dl>
+
+<br><br>
+<table style="width: 100%" border="0">
+<caption>Grouped columns and rows</caption>
+<colgroup>
+<col align="right">
+<col span="4">
+</colgroup>
+<thead>
+	<tr>
+		<th rowspan="2">
+		<img src="images/one.png" alt="Camel" width="205" height="167"
+	/></th>
+		<th colspan="4" valign="top">
+		<h1>Camelid Comparison</h1>
+		<p>Picture of a Camel</p>
+		</th>
+	</tr>
+	<tr valign="bottom">
+
+	<th># of Humps</th>
+	<th>Indigenous Region</th>
+	<th>Splits</th>
+	<th>Produces Wool</th>
+
+
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<th style="height: 23px"align="right">Camel (Bactrian)</th>
+		<td style="height: 23px" align="center">2</td>
+		<td style="height: 23px" align="center">Africa/Asia</td>
+		<td rowspan="2"align="center">Llama</td>
+		<td rowspan="2"align="center">Llama</td>
+
+	</tr>
+	<tr>
+		<th style="height: 23px"align="right">Llamas</th>
+		<td style="height: 23px"align="center">1</td>
+		<td style="height: 23px"align="center">Argentina</td>
+
+	</tr>
+		
+	
+	</tbody>
+</table>
+</body>
+</html>

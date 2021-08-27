@@ -1,0 +1,72 @@
+﻿
+.slider{
+    height: 300px;
+    width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+}
+.slider .left-control{
+    height: 300px;
+    display: flex;
+    font-size: 50px;
+    font-weight: 900;
+    font-family:monospace;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.left-control:hover{
+    transform: scale(1.2);
+ 
+}
+.slider .image{
+    border-image: url('') stretch;
+	height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-clip: content-box;
+    background-image: url('covid3.png');  
+    animation-name: sliding;
+    animation-iteration-count: infinite;
+    animation-duration: 30s;
+    animation-timing-function:ease-in;
+
+}
+.slider .right-control{
+    height: 300px;
+    display: flex;
+    font-size: 50px;
+    font-weight: 900;
+    font-family:monospace;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.right-control:hover{
+    transform: scale(1.2);
+}
+@media only screen and (max-width: 600px) {
+.slider{
+    height: 300px;
+    width: 360px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+}
+  }
+
+@keyframes sliding {
+    25%{
+        background-image: url('covid2.jpg');
+    }
+    50%{
+        background-image: url('covid.png');
+    }
+    75%{
+        background-image: url('covid3.jpg');
+    }
+    100%{
+        background-image: url('../images/doc2.jpg');
+    }
+}

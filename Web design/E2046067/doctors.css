@@ -1,0 +1,95 @@
+.card{
+    position: relative;
+    margin: auto;
+    width: 80%;
+    padding: 10px;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 4fr 8fr;
+    grid-auto-flow: row;
+    justify-content: flex-end;
+
+
+}
+.item1{
+    margin: 10px;
+    width: auto;
+    height: auto;
+    box-sizing: border-box;
+    box-shadow: 0px 3px 5px -1px rgb(0 0 0 / 20%), 0px 6px 10px 0px rgb(0 0 0 / 14%), 0px 1px 18px 0px rgb(0 0 0 / 12%);
+}
+.item2{
+    margin: 10px;
+    width: auto;
+    height: auto;
+    text-align: justify;
+    font-size: 18px;
+    font-family:fantasy;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    box-shadow: 0px 3px 5px -1px rgb(0 0 0 / 20%), 0px 6px 10px 0px rgb(0 0 0 / 14%), 0px 1px 18px 0px rgb(0 0 0 / 12%);
+}
+.item2 ol{
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.text-items{
+    flex: 100%;
+    display: flex;
+    flex-direction: row;
+    word-wrap: break-word;
+    margin-bottom: 20px;
+
+}
+.left-item { 
+    padding: 10px;
+    flex: 20%;
+    height: 20px;
+  }
+ div>span{
+     font-size: 15px;
+     font-weight: 550;
+    font-family:sans-serif;
+ } 
+.right-item {
+
+    padding: 10px;
+    flex: 80%;
+    height: 20px;
+    word-wrap: break-word;
+  }
+.icon{
+    width: 20%;
+    height: auto;
+}
+.item2 > ol > p , ul {
+    margin: 20px 20px 0 20px;
+    font-family:sans-serif;
+}
+@media (max-width:600px){
+    .card{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 100px;
+        
+    }
+    .item2{
+        padding-bottom: 100px;
+        text-align: justify;
+
+    }
+    .item1{
+        margin-top: 50px;
+    }
+    .text-items{
+        align-items: baseline;
+        justify-content: flex-end;
+        margin-bottom: 10px;
+    }
+    .icon{
+    width: 40%;
+    height: auto;
+} 
+
+}
